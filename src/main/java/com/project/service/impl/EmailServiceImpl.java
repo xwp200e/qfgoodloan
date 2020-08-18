@@ -34,7 +34,7 @@ public class EmailServiceImpl implements IEmailService {
         try {
             javaMailSender.send(simpleMailMessage);
             redisTemplate.opsForValue().set(mail,random);
-            redisTemplate.expire(mail,180, TimeUnit.SECONDS);
+            redisTemplate.expire(mail,300, TimeUnit.SECONDS);
             return 1;
         }catch (Exception e){
             System.out.println(e.getMessage());

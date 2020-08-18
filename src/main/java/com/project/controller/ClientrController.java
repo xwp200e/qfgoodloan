@@ -14,7 +14,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-public class UserController {
+public class ClientrController {
 
     @Autowired
     private IClientService clientService;
