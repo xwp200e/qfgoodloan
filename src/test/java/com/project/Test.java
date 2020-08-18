@@ -1,7 +1,9 @@
 package com.project;
 
 import com.project.pojo.Credit;
+import com.project.pojo.Loaned;
 import com.project.service.ICreditService;
+import com.project.service.ILoanedService;
 import com.project.service.IProfessionService;
 import com.project.service.impl.ProfessionServiceImpl;
 import org.junit.runner.RunWith;
@@ -51,4 +53,18 @@ public class Test {
 
         System.out.println(creditService.saveCredit(c));
     }
+    @Resource
+    ILoanedService loanedService;
+    @org.junit.Test
+    public void ffftest(){
+        System.out.println(loanedService.findAll());
+    }
+
+    @Resource
+    ILoanedService wloanedService;
+    @org.junit.Test
+    public void gggtest(){
+        System.out.println(loanedService.findByloid(2));
+    }
+
 }
