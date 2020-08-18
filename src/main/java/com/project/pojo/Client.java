@@ -22,5 +22,6 @@ public class Client {
     private int status;
     private int lid;
     private int pid;
+    private String mail;
 
 }
