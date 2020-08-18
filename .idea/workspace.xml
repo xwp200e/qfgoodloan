@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6f752ee9-3566-415e-99fc-c72f51cff082" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/service/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/service/IClientService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache_maven_3.3.9\apache_maven_3.3.9" />
+        <option name="mavenHome" value="D:/apache_maven_3.3.9/apache_maven_3.3.9" />
+        <option name="userSettingsFile" value="D:\apache_maven_3.3.9\apache_maven_3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gGFPp7bdwVLYGMFogVclkoeBp4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/project" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.pojo" />
+      <recent name="com.project.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\qfgoodloan-master\qfgoodloan\src\main\java\com\project" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LoanprojectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="loanproject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.LoanprojectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f752ee9-3566-415e-99fc-c72f51cff082" name="Default Changelist" comment="" />
+      <created>1597733000943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597733000943</updated>
+      <workItem from="1597733002706" duration="3649000" />
+    </task>
+    <task id="LOCAL-00001" summary="Client">
+      <created>1597733225083</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597733225083</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Client">
+      <created>1597737029280</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597737029280</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Client">
+      <created>1597737359079</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597737359079</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="385" y="14" key="CommitChangelistDialog2" timestamp="1597737358560">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="385" y="14" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1597737358560" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1597737529523">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1597737529523" />
+    <state x="565" y="197" key="chooseDestDirectoryDialog" timestamp="1597733084313">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="565" y="197" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1597733084313" />
+    <state x="472" y="219" key="git4idea.merge.GitPullDialog" timestamp="1597733346454">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="472" y="219" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1597733346454" />
+  </component>
+</project>
