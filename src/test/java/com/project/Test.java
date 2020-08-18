@@ -1,5 +1,7 @@
 package com.project;
 
+import com.project.pojo.Credit;
+import com.project.service.ICreditService;
 import com.project.service.IProfessionService;
 import com.project.service.impl.ProfessionServiceImpl;
 import org.junit.runner.RunWith;
@@ -28,6 +30,25 @@ public class Test {
         System.out.println(iProfessionService.findBypid(2));
     }
 
+    @Resource
+    ICreditService creditService;
+    @org.junit.Test
+    public void  ccctest(){
+        System.out.println(creditService.finaAll());
+    }
 
+    @Resource
+    ICreditService wcreditService;
+    @org.junit.Test
+    public void dddtest(){
+        System.out.println(creditService.findByid(2));
+    }
+    @Resource
+    ICreditService w2creditService;
+    @org.junit.Test
+    public void eeetest(){
+        Credit c = new Credit(3,3,40);
 
+        System.out.println(creditService.saveCredit(c));
+    }
 }
