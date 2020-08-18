@@ -19,7 +19,6 @@ public class UserController {
     public String registerClient(Client client){
         // Client密码MD5加密
         client.setPass(md5Util.pass2MD5(client.getPass()));
-
         return null;
     }
 }
