@@ -32,8 +32,8 @@ public class UserController {
         return "fail";
     }
 
-    @GetMapping("/getAll")
-    public List<Client> getAll() {
+    @GetMapping("/getAllClient")
+    public List<Client> getAllClient() {
         return clientService.finaAll();
     }
 }
