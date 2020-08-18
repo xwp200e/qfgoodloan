@@ -7,4 +7,5 @@ import java.io.Serializable;
 
 
 public interface ClientDao extends JpaRepository<Client, Serializable> {
+
 }

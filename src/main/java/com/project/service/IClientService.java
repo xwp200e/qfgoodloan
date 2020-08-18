@@ -11,7 +11,7 @@ public interface IClientService {
 
     Integer updateClient(Client e);
 
-    void saveClient(Client e);
+    Integer saveClient(Client e);
 
-    void deleteClient(int cid);
+    Integer deleteClient(int cid);
 }

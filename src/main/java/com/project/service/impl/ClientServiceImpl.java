@@ -41,13 +41,23 @@ public class ClientServiceImpl implements IClientService {
 
 
     @Override
-    public void saveClient(Client e) {
-        clientDao.saveAndFlush(e);
+    public Integer saveClient(Client e) {
+        Client client = clientDao.saveAndFlush(e);
+        if (client != null){
+            return 1;
+        }
+        return 0;
     }
 
     @Override
-    public void deleteClient(int cid) {
-        clientDao.deleteById(cid);
+    public Integer deleteClient(int cid) {
+        try {
+            clientDao.deleteById(cid);
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 
