@@ -28,7 +28,7 @@ public class ClientrController {
 
         String mail = userReq.getMail();
 
-        String code =(String)redisTemplate.opsForValue().get(mail);
+        String code = (String) redisTemplate.opsForValue().get(mail);
         if (code == null || !code.equals(userReq.getCode())){
             return "fail";
         }
@@ -37,11 +37,12 @@ public class ClientrController {
 
         // Client密码MD5加密
         client.setPass(md5Util.pass2MD5(userReq.getPass()));
+        client.setMail(userReq.getMail());
         client.setIdc(userReq.getIdc());
         client.setName(userReq.getName());
         client.setSex(userReq.getSex() == null || userReq.getSex() == "" ? "male" : userReq.getSex());
         client.setPid(userReq.getPid());
-
+        System.out.println(client);
 
         if (clientService.saveClient(client) >= 1){
             return "success";

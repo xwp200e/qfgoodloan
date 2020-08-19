@@ -25,7 +25,7 @@ public class EmailServiceImpl implements IEmailService {
     @Override
     public Integer sendMail(String mail) {
         Random r = new Random();
-        int random = r.nextInt(9999);
+        String random = "" + r.nextInt(9999);
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setFrom(sendName);
         simpleMailMessage.setTo(mail);

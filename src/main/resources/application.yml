@@ -1,0 +1,6 @@
+upload:
+  qiniu:
+    ak: fK89WvsTSoghYObTjVrZ9E1aHwmEM4U-rC2xm1no
+    sk: w_CylmwV5vvDQutw1PyjqGOlWJKROzCq9vEbdysB
+    bucketname: loanproject
+    url: http://qfadoi193.hb-bkt.clouddn.coms
