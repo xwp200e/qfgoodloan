@@ -15,5 +15,6 @@ public interface IClientService {
 
     Integer deleteClient(int cid);
 
+    List<Client> findByIdcOrMail(String idc, String mail);
 
 }

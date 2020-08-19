@@ -29,7 +29,6 @@ public class ClientServiceImpl implements IClientService {
         return null;
     }
 
-
     @Override
     public Integer updateClient(Client e) {
         Client client = clientDao.saveAndFlush(e);
@@ -58,6 +57,11 @@ public class ClientServiceImpl implements IClientService {
             e.printStackTrace();
             return 0;
         }
+    }
+
+    @Override
+    public List<Client> findByIdcOrMail(String idc, String mail) {
+        return clientDao.findByIdcOrMail(idc, mail);
     }
 
 
