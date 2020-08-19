@@ -6,8 +6,10 @@ import com.project.pojo.req.UserReq;
 import com.project.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -24,8 +26,10 @@ public class ClientrController {
 
     private MD5Util md5Util = MD5Util.getInstance();
 
+
+    // 注册Client
     @PostMapping("/registerClient")
-    public String registerClient(@RequestBody UserReq userReq){
+    public String registerClient(@RequestBody UserReq userReq, HttpServletRequest request){
 
         String mail = userReq.getMail();
 
@@ -52,7 +56,22 @@ public class ClientrController {
         client.setPid(userReq.getPid());
         System.out.println(client);
 
+        // 设置初始额度
+        switch (userReq.getPid()){
+            case 1:
+            case 0:
+                client.setLid(1);
+                break;
+            default:
+                client.setLid(2);
+                break;
+        }
+
+        // 添加Client 并且把name，cid，photo放到session里
         if (clientService.saveClient(client) >= 1){
+            request.getSession().setAttribute("name", client.getName());
+            request.getSession().setAttribute("cid", client.getCid());
+            request.getSession().setAttribute("photo", client.getPhoto());
             return "success";
         }
         return "fail";
@@ -63,8 +82,9 @@ public class ClientrController {
         return clientService.finaAll();
     }
 
+    // Client登录
     @PostMapping("/loginClient")
-    public String loginClient(@RequestBody Map<String, Object> map){
+    public String loginClient(@RequestBody Map<String, Object> map, HttpServletRequest request){
 
         List<Client> list = clientService.findByIdcOrMail((String) map.get("idc"), (String) map.get("mail"));
 
@@ -73,9 +93,28 @@ public class ClientrController {
         }
 
         if (md5Util.pass2MD5((String)map.get("pass")).equals(list.get(0).getPass())){
+            request.getSession().setAttribute("name", list.get(0).getName());
+            request.getSession().setAttribute("cid", list.get(0).getCid());
+            request.getSession().setAttribute("photo", list.get(0).getPhoto());
             return "success";
         }
 
         return "fail";
+    }
+
+    // 获取用户name
+    @GetMapping("/getName")
+    public String getName(HttpServletRequest request){
+
+        return (String) request.getSession().getAttribute("name");
+    }
+
+    // 清空session
+    @GetMapping("/sessionClear")
+    public String sessionClear(HttpServletRequest request){
+        request.getSession().removeAttribute("name");
+        request.getSession().removeAttribute("cid");
+        request.getSession().removeAttribute("photo");
+        return "success";
     }
 }
