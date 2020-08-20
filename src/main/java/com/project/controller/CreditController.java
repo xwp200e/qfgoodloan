@@ -22,4 +22,6 @@ public class CreditController {
 
         return credit.getScore();
 }
+
+
 }

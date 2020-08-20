@@ -38,7 +38,7 @@ public class ClientrController {
             code = (String) redisTemplate.opsForValue().get(mail);
         } catch (Exception e) {
             e.printStackTrace();
-            return "fail";
+            return "yanzhengmacuowu";
         }
 
         if (code == null || !code.equals(userReq.getCode())){
@@ -116,5 +116,16 @@ public class ClientrController {
         request.getSession().removeAttribute("cid");
         request.getSession().removeAttribute("photo");
         return "success";
+    }
+    
+    @PostMapping("/updateClient")
+    public String updateClient(@RequestBody Client client){
+
+        Integer integer = clientService.updateClient(client);
+        if (integer == 1){
+            return "success";
+        }
+
+        return "fail";
     }
 }
