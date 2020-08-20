@@ -16,4 +16,6 @@ public interface ICreditService {
     Integer saveCredit(Credit e);
 
     Integer deleteCredit(int crid);
+
+    Credit findByCid(int cid);
 }

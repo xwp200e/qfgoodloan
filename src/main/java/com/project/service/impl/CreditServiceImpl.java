@@ -57,4 +57,9 @@ public class CreditServiceImpl implements ICreditService {
         }
         return 0;
     }
+
+    @Override
+    public Credit findByCid(int cid) {
+        return cc.findByCid(cid);
+    }
 }

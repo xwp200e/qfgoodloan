@@ -10,7 +10,7 @@ public interface ILoanedService {
 
     Loaned findByloid(int loid);
 
-    Integer updateLoaned(Loaned e);
+    boolean updateLoaned(Loaned e);
 
     Integer saveLoaned(Loaned e);
 

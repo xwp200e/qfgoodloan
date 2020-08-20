@@ -31,12 +31,12 @@ public class LoanedServiceImpl implements ILoanedService {
     }
 
     @Override
-    public Integer updateLoaned(Loaned e) {
+    public boolean updateLoaned(Loaned e) {
         Loaned loaned = loanedDao.saveAndFlush(e);
         if (loaned != null){
-            return 1;
+            return true;
         }
-             return 0;
+             return false;
     }
 
     @Override
