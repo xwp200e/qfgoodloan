@@ -7,6 +7,7 @@ import com.project.service.IClientService;
 import com.project.service.ICreditService;
 import com.project.service.ILoanedService;
 import com.project.service.IProfessionService;
+import com.project.service.impl.LoanedServiceImpl;
 import com.project.service.impl.ProfessionServiceImpl;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -69,6 +70,7 @@ public class Test {
     @org.junit.Test
     public void gggtest(){
         System.out.println(loanedService.findByloid(2));
+       // System.out.println(loanedService.);
     }
 
     @Resource
@@ -92,5 +94,8 @@ public class Test {
         client.setName("123456");
         Integer integer = clientService.saveClient(client);
     }
+
+
+
 
 }

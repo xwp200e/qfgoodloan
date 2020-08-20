@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class LoanedController {
@@ -26,4 +27,12 @@ public class LoanedController {
         return "failed";
     }
 
+    @PostMapping("/queryLoaned")
+    public int queryLoaned(HttpServletRequest request){
+        int cid = (int)request.getSession().getAttribute("cid");
+        Loaned l = loanedService.findByloid(cid);
+        int i = l.getCid();
+        Loaned loaned = loanedService.findByloid(i);
+        return l.getRmoney();
+    }
 }
