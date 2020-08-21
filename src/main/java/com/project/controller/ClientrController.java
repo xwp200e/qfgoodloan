@@ -4,9 +4,10 @@ import com.project.Util.MD5Util;
 import com.project.pojo.Client;
 import com.project.pojo.req.UserReq;
 import com.project.service.IClientService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.http.HttpRequest;
+
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -91,7 +92,7 @@ public class ClientrController {
         if (list.isEmpty()){
             return "no";
         }
-
+        System.out.println(list.get(0).getCid());
         if (md5Util.pass2MD5((String)map.get("pass")).equals(list.get(0).getPass())){
             request.getSession().setAttribute("name", list.get(0).getName());
             request.getSession().setAttribute("cid", list.get(0).getCid());

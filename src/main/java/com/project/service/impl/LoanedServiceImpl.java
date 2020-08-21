@@ -17,6 +17,11 @@ public class LoanedServiceImpl implements ILoanedService {
     private LoanedDao loanedDao;
 
     @Override
+    public List<Loaned> findAllByCid(int cid) {
+        return loanedDao.findAllByCid(cid);
+    }
+
+    @Override
     public List<Loaned> findAll() {
         return loanedDao.findAll();
     }

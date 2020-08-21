@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ILoanedService {
 
+    List<Loaned>findAllByCid(int cid);
+
     List<Loaned>findAll();
 
     Loaned findByloid(int loid);
