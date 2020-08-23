@@ -2,9 +2,11 @@ package com.project.controller;
 
 import com.project.Util.MD5Util;
 import com.project.pojo.Client;
+import com.project.pojo.Credit;
 import com.project.pojo.req.UserReq;
 import com.project.service.IClientService;
 
+import com.project.service.ICreditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -21,6 +23,7 @@ public class ClientrController {
 
     @Autowired
     private IClientService clientService;
+    private ICreditService creditService;
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -67,6 +70,13 @@ public class ClientrController {
                 client.setLid(2);
                 break;
         }
+
+        // 添加用户征信
+        Credit credit = new Credit();
+        credit.setCid(client.getCid());
+        credit.setScore(60);
+        creditService.saveCredit(credit);
+
 
         // 添加Client 并且把name，cid，photo放到session里
         if (clientService.saveClient(client) >= 1){

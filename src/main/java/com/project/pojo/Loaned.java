@@ -22,5 +22,6 @@ public class Loaned {
     private int rmoney;
     private boolean lstatus;
     private String subject;
+    private boolean ischecked;
 
 }

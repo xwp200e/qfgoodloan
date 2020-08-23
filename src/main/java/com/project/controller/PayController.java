@@ -88,6 +88,9 @@ public class PayController {
             System.out.println(loanedServiceByloid);
             if (loanedServiceByloid.getRmoney() <= 0) {
                 loanedServiceByloid.setLstatus(true);
+                // 信用加1
+
+
             }
             boolean b = loanedService.updateLoaned(loanedServiceByloid);
             System.out.println("修改"+b);
