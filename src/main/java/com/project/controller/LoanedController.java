@@ -27,7 +27,9 @@ public class LoanedController {
 
     @Resource
     private ILoanecStatuService loanecStatuService;
+    @Resource
     private ILimiiService limiiService;
+    @Resource
     private IClientService clientService;
 
     @ResponseBody

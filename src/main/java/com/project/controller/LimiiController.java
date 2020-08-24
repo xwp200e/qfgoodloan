@@ -30,6 +30,7 @@ public class LimiiController {
 
     @Resource
     private ILoanecStatuService loanecStatuService;
+    @Resource
     private ICreditService creditService;
 
 

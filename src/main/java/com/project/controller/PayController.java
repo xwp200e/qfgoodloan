@@ -47,7 +47,7 @@ public class PayController {
         AlipayTradePagePayRequest alipayRequest =  new AlipayTradePagePayRequest(); //创建API对应的request
         //支付宝回调
         alipayRequest.setReturnUrl( "http://www.baidu.com" );
-        alipayRequest.setNotifyUrl( "http://hello.shenzhuo.vip:20763/returlCallBack" ); //在公共参数中设置回跳和通知地址
+        alipayRequest.setNotifyUrl( "http://[240e:bf:d205:f365:197f:d409:3244:27da]:8080/returlCallBack" ); //在公共参数中设置回跳和通知地址
         // alipayRequest.putOtherTextParam("app_auth_token", "201611BB8xxxxxxxxxxxxxxxxxxxedcecde6");//如果 ISV 代商家接入电脑网站支付能力，则需要传入 app_auth_token，使用第三方应用授权；自研开发模式请忽略
         alipayRequest.setBizContent( "{"  +
                 "    \"out_trade_no\":\"" + uuid + "\","  +

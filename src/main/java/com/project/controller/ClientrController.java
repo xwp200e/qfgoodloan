@@ -23,6 +23,7 @@ public class ClientrController {
 
     @Autowired
     private IClientService clientService;
+    @Autowired
     private ICreditService creditService;
 
     @Autowired
